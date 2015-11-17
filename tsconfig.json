@@ -1,0 +1,9 @@
+{
+		"compilerOptions": {
+			"target": "ES5",
+			"inlineSourceMap": true,
+			"removeComments": true,
+			"watch": true,
+			"outDir": "./build"
+		}	
+}
