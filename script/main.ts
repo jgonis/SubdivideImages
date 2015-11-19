@@ -6,13 +6,24 @@
     context.onload = () => {
         myInit();
     }
-
+    let count = 0;
+    let currentTotal = 0.0;
     function myInit() {
         if(context.Worker) {
             let myWorker = new Worker("build/worker.js");
             myWorker.onmessage = (event) => {
-            
+                if(event.data["type"] === 'start') {
+                    console.log("start message received");
+                } else if(event.data["type"] === "tick") {
+                    let ticks = context.document.getElementById("ticks");
+                    if(ticks) {
+                        currentTotal += event.data["ticks"];
+                        count++;
+                        ticks.textContent = (currentTotal / count).toString();
+                    }
+                }
             }
+            myWorker.postMessage("start");
         }
         
         let image = new Image();
