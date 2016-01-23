@@ -2,6 +2,7 @@
 	self.onmessage = (event) => {
   		if(event.data === "start") {
 			console.log("starting in worker");
+            self.postMessage({"type": "tick", "ticks": 10});
 			//self.setTimeout(iterate, 0);
 		}
 	} 
