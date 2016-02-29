@@ -4,6 +4,6 @@
 			"inlineSourceMap": true,
 			"removeComments": true,
 			"watch": true,
-			"outDir": "./build"
+			"outFile": "../../build/app.js"
 		}	
 }

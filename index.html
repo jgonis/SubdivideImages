@@ -6,11 +6,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="valigner">
+    <div class="valigner alignHCenter alignVCenter">
         <canvas id="canvas" width="10" height="10"></canvas>
+        
+            <div class="haligner alignVCenter ">
+                <div class="valigner">
+                    <div class="label">K-Means:</div>
+                    <div class="label">Points: </div>
+                </div>
+                <div class="valigner alignVCenter">
+                    <input type="number" min="1" max="5" id="kValue"/>
+                    <input type="number" min="1" id="point"/>
+                </div>
+            </div>   
+            
+            <div class="haligner alignVCenter">
+                <button>Start</button>
+                <button>Stop</button>
+            
+            </div>
+        
     </div>
 </body>
-<script src="Chart.js"></script>
-<script src="build/worker.js"></script>
-<script src="build/main.js"></script>
+<script src="build/app.js"></script>
 </html>
