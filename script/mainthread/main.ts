@@ -130,7 +130,7 @@ class AppMain {
 
         this.DrawPoints(this._points);
     }
-
+    
     private DrawPoints(points: Array<Point>) {
         let ctx: CanvasRenderingContext2D = this._canvas.getContext("2d");
         ctx.beginPath();
