@@ -124,8 +124,8 @@ class AppMain {
 
         for (let i: number = 0; i < this._points.length; i++) {
 
-            this._points[i] = new Point(RandGenerator.GetRandBetween(5, this._canvasWidth-5),
-                RandGenerator.GetRandBetween(5, this._canvasHeight-5), 255, 0, 0);
+            this._points[i] = new Point(RandGenerator.GetRandBetween(10, this._canvasWidth-10),
+                RandGenerator.GetRandBetween(10, this._canvasHeight-10), 255, 0, 0);
         }
 
         this.DrawPoints(this._points);
